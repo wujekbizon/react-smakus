@@ -1,0 +1,174 @@
+@import '../../global.scss';
+
+.slider {
+  width: 100%;
+  height: calc(100vh - 160px);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    height: calc(100vh - 100px);
+  }
+
+  .arrowLeft {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid $borderColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.5;
+
+    @include mobile {
+      opacity: 0.8;
+      bottom: 200px;
+    }
+
+    .icon {
+      font-size: 25px;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-color: black;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  .arrowRight {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid $borderColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.5;
+
+    @include mobile {
+      opacity: 0.8;
+      bottom: 200px;
+    }
+
+    .icon {
+      font-size: 25px;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-color: black;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    position: relative;
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      opacity: 0;
+      background-color: whitesmoke;
+      transition: all 0.6s linear;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      &.activeSlide {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &.lastSlide {
+        transform: translateX(-100%);
+      }
+      &.nextSlide {
+        transform: translateX(100%);
+      }
+
+      .imgContainer {
+        height: 100%;
+        flex: 1.5;
+
+        .image {
+          height: 80vh;
+          width: 100%;
+          object-fit: cover;
+          opacity: 1;
+          border: 1px solid $borderColor;
+          border-radius: 0px 0px 15px 0px;
+
+          @include mobile {
+            height: 55vh;
+            border-radius: 0px;
+          }
+        }
+      }
+
+      .info {
+        padding: 50px;
+        flex: 1;
+
+        @include mobile {
+          padding: 5px 10px;
+        }
+
+        .title {
+          font-weight: 300;
+          font-size: 50px;
+          color: $borderColor;
+
+          @include mobile {
+            margin-top: 25px;
+            font-size: 25px;
+            text-align: center;
+            font-weight: 500;
+          }
+        }
+
+        .desc {
+          margin: 50px 0px;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 3px;
+          color: $textColor;
+
+          @include mobile {
+            font-size: 16px;
+            margin: 15px 5px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

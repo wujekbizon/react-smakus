@@ -1,0 +1,17 @@
+$navColor: #161b22;
+$sidebarColor: #21262d;
+$mainColor: #0d1117;
+$logoColor: #58a6ff;
+$textColor: #705f53;
+$borderColor: #30363d;
+$lightSidebar: #c0c5cc;
+$darkColor: #5e4f45;
+$lightColor: #ebecee;
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
