@@ -21,10 +21,6 @@
       font-weight: 400;
       color: $borderColor;
     }
-
-    // @include mobile {
-    //   margin-top: 200px;
-    // }
   }
 
   .container {
@@ -52,16 +48,16 @@
       transition: all 0.4s ease-in;
       transition: opacity ease 0.4s;
 
-      &:active {
-        position: fixed;
-        z-index: 999;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        border-radius: 0px;
-      }
+      // &:active {
+      //   position: fixed;
+      //   z-index: 999;
+      //   left: 0;
+      //   top: 0;
+      //   width: 100vw;
+      //   height: 100vh;
+      //   background-color: rgba(0, 0, 0, 0.9);
+      //   border-radius: 0px;
+      // }
 
       @include mobile {
         width: 100%;
@@ -79,15 +75,15 @@
           height: 200px;
         }
 
-        &:active {
-          position: fixed;
-          z-index: 999;
-          left: 0;
-          top: 0;
-          width: 100vw;
-          height: 100vh;
-          object-fit: scale-down;
-        }
+        // &:active {
+        //   position: fixed;
+        //   z-index: 999;
+        //   left: 0;
+        //   top: 0;
+        //   width: 100vw;
+        //   height: 100vh;
+        //   object-fit: scale-down;
+        // }
       }
     }
   }
