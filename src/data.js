@@ -409,7 +409,7 @@ export const dumplings = [
     price: 5,
   },
   {
-    id: 8,
+    id: 9,
     name: 'Kefir',
     price: 3.5,
   },

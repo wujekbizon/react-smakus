@@ -1,8 +1,12 @@
 import './navbar.scss';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <>
       <div className={`navbar ${menuOpen ? 'active' : ''}`}>
@@ -21,7 +25,10 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="right">
             <LanguageOutlinedIcon className="icon" />
             <span className="language">English</span>
-            <DarkModeOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon
+              className="icon orange"
+              onClick={() => dispatch({ type: 'TOGGLE' })}
+            />
           </div>
         </div>
       </div>

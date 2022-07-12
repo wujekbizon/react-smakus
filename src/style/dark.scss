@@ -1,0 +1,198 @@
+@import '../global.scss';
+
+.app.dark {
+  .navbar {
+    background-color: $navColor;
+    color: whitesmoke;
+    .wrapper {
+      .left {
+        .hamburger {
+          span {
+            background-color: whitesmoke;
+          }
+        }
+      }
+
+      .center {
+        .subtitle {
+          color: $orangeColor;
+        }
+      }
+
+      .right {
+        .orange {
+          color: $orangeColor;
+        }
+      }
+    }
+  }
+
+  .menu {
+    a {
+      &:hover {
+        color: $orangeColor;
+      }
+    }
+  }
+
+  .slider {
+    background-color: $borderColor;
+
+    .arrowRight {
+      border-color: white;
+    }
+
+    .container {
+      .slide {
+        background-color: $borderColor;
+
+        .info {
+          .title {
+            color: $lightColor;
+          }
+
+          .desc {
+            color: $orangeColor;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    .infoCard {
+      background-color: $navColor;
+
+      span {
+        color: $orangeColor;
+      }
+
+      .name {
+        color: white;
+      }
+
+      .title {
+        color: white;
+      }
+    }
+  }
+
+  .menuList {
+    color: $orangeColor;
+    &.active {
+      border-color: $orangeColor;
+      color: white;
+    }
+  }
+
+  .list {
+    background-color: $sidebarColor;
+
+    .title {
+      color: white;
+    }
+
+    .container {
+      border-color: $lightColor;
+    }
+
+    .item {
+      border-color: $lightColor;
+
+      h3 {
+        color: whitesmoke;
+      }
+
+      span {
+        color: white;
+      }
+    }
+  }
+
+  .contact {
+    background-color: $borderColor;
+    margin-top: 0px;
+
+    .left {
+      background-color: $navColor;
+      color: whitesmoke;
+
+      .top {
+        .title {
+          color: white;
+          font-weight: 300;
+        }
+      }
+
+      .bottom {
+        .title {
+          color: white;
+          font-weight: 300;
+        }
+
+        form {
+          input {
+            background-color: $sidebarColor;
+            color: white;
+            border: none;
+          }
+
+          textarea {
+            background-color: $sidebarColor;
+            color: white;
+            border: none;
+          }
+
+          .btn-form {
+            background-color: $sidebarColor;
+
+            &:hover {
+              color: $orangeColor;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      .info-map {
+        background-color: $navColor;
+        color: white;
+
+        span {
+          color: $orangeColor;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    background-color: $sidebarColor;
+
+    .title {
+      h2 {
+        color: white;
+      }
+    }
+
+    .container {
+      background-color: $navColor;
+
+      .imgContainer {
+        box-shadow: 0px 0px 10px 1px rgba(201, 209, 217, 0.8);
+
+        @include mobile {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: $navColor;
+
+    .right {
+      color: white;
+    }
+  }
+}

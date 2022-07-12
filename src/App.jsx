@@ -1,4 +1,6 @@
+import './style/dark.scss';
 import './app.scss';
+
 import Navbar from './components/navbar/Navbar';
 import Menu from './components/menu/Menu';
 import Slider from './components/slider/Slider';
@@ -9,12 +11,14 @@ import Advertisement from './components/advertisement/Advertisement';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/footer/Footer';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { DarkModeContext } from './context/darkModeContext';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { darkMode } = useContext(DarkModeContext);
   return (
-    <div className="app">
+    <div className={darkMode ? 'app dark' : 'app'}>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
