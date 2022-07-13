@@ -13,6 +13,8 @@ import Footer from './components/footer/Footer';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { DarkModeContext } from './context/darkModeContext';
+import { ToastContainer, Zoom } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +48,12 @@ const App = () => {
       <Gallery />
       <Contact />
       <Footer />
+
+      <ToastContainer
+        position="top-center"
+        transition={Zoom}
+        draggablePercent={60}
+      />
     </div>
   );
 };
