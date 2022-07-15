@@ -5,8 +5,10 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="left">
@@ -46,7 +48,7 @@ const Footer = () => {
       <div className="right">
         <div className="contactItem">
           <LocationOnOutlinedIcon style={{ marginRight: '10px' }} />
-          ul. Mazowiecka 41, 30-001 Kraków
+          {t('footer')}
         </div>
         <div className="contactItem">
           <PhoneOutlinedIcon style={{ marginRight: '10px' }} />

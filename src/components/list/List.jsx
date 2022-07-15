@@ -1,21 +1,17 @@
 import './list.scss';
-import { menu } from '../../data';
 import MenuList from '../menuList/MenuList';
+import { Categories, Breakfast, Soups, Bar } from '../../data';
 import { useEffect, useState } from 'react';
-import {
-  breakfast,
-  soups,
-  bar,
-  main,
-  dumplings,
-  extras,
-  drinks,
-  fish,
-} from '../../data';
+import { main, dumplings, extras, drinks, fish } from '../../data';
 
 const List = () => {
   const [selected, setSelected] = useState('breakfast');
   const [data, setData] = useState([]);
+
+  const menu = Categories();
+  const breakfast = Breakfast();
+  const soups = Soups();
+  const bar = Bar();
 
   useEffect(() => {
     switch (selected) {

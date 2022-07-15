@@ -1,11 +1,39 @@
 import './slider.scss';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
-import { sliderItems } from '../../data';
 import { useState, useEffect } from 'react';
 import Advertisement from '../advertisement/Advertisement';
+import { useTranslation } from 'react-i18next';
 
 const Slider = () => {
+  const { t } = useTranslation();
+  const sliderItems = [
+    {
+      id: 1,
+      img: 'https://i.postimg.cc/bYBZn32W/bar.jpg',
+      title: t('titleFirst'),
+      desc: t('descFirst'),
+    },
+    {
+      id: 2,
+      img: 'https://i.postimg.cc/1zBDpyyK/plac3a.jpg',
+      title: t('titleSecond'),
+      desc: t('descSecond'),
+    },
+    {
+      id: 3,
+      img: 'https://i.postimg.cc/pTVKrBds/ciasto.jpg',
+      title: t('titleThird'),
+      desc: t('descThird'),
+    },
+    {
+      id: 4,
+      img: 'https://i.postimg.cc/fWpxj3fq/bar3.jpg',
+      title: t('titleFourth'),
+      desc: t('descFourth'),
+    },
+  ];
+
   const [slideIndex, setSlideIndex] = useState(0);
 
   const nextSlide = () => {
@@ -40,7 +68,7 @@ const Slider = () => {
     }, 8000);
 
     return () => clearInterval(slider);
-  }, [slideIndex]);
+  }, [slideIndex, sliderItems.length]);
 
   return (
     <>
@@ -82,7 +110,7 @@ const Slider = () => {
         </div>
       </div>
       <Advertisement
-        title="Przyjmujemy zamówienia:"
+        title={t('adSlider')}
         text={['12 634 16 82', 'smakus.gmail.com']}
       />
     </>

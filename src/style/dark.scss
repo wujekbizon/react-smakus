@@ -21,7 +21,23 @@
 
       .right {
         .orange {
+          display: none;
+        }
+
+        .sun {
+          display: block;
           color: $orangeColor;
+        }
+
+        .globe {
+          color: whitesmoke;
+        }
+        .langContainer {
+          .language {
+            &:hover {
+              color: $orangeColor;
+            }
+          }
         }
       }
     }

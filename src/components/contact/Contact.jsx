@@ -3,8 +3,10 @@ import { MapContainer, Popup, TileLayer, Marker } from 'react-leaflet';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const form = useRef();
 
   const sendEmail = (event) => {
@@ -34,64 +36,64 @@ const Contact = () => {
       <div className="left">
         <div className="top">
           <div className="info">
-            <h2 className="title">GODZINY OTWARCIA</h2>
+            <h2 className="title">{t('contactTitle')}</h2>
 
             <div className="infoContainer">
               <div className="item">
-                <p>Poniedziałek</p>
+                <p>{t('monday')}</p>
                 <span>10:00 - 17:30</span>
               </div>
               <div className="item">
-                <p>Wtorek</p>
+                <p>{t('tuesday')}</p>
                 <span>10:00 - 17:30</span>
               </div>
               <div className="item">
-                <p>Środa</p>
+                <p>{t('wednesday')}</p>
                 <span>10:00 - 17:30</span>
               </div>
               <div className="item">
-                <p>Czwartek</p>
+                <p>{t('thursday')}</p>
                 <span>10:00 - 17:30</span>
               </div>
               <div className="item">
-                <p>Piątek</p>
+                <p>{t('friday')}</p>
                 <span>10:00 - 17:30</span>
               </div>
               <div className="item">
-                <p>Sobota</p>
+                <p>{t('saturday')}</p>
                 <span>10:00 - 15:30</span>
               </div>
               <div className="item">
-                <p>Niedziela i Święta</p>
-                <span>Zakmnięte</span>
+                <p>{t('sunday')}</p>
+                <span>{t('closed')}</span>
               </div>
             </div>
           </div>
         </div>
         <div className="bottom">
           <div className="formContainer">
-            <h2 className="title">NAPISZ DO NAS</h2>
+            <h2 className="title">{t('formTitle')}</h2>
             <form ref={form} onSubmit={sendEmail}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Twoje imię i nazwisko"
-                required
-              />
+              <input type="text" name="name" placeholder={t('name')} required />
               <input
                 type="email"
                 name="email"
-                placeholder="Twój adres e-mail"
+                placeholder={t('email')}
                 required
               />
-              <input type="text" name="subject" placeholder="Temat" required />
+              <input
+                type="text"
+                name="subject"
+                placeholder={t('subject')}
+                required
+              />
               <textarea
-                placeholder="Wiadomość"
+                placeholder={t('message')}
                 name="message"
                 required
               ></textarea>
               <button type="submit" className="btn-form">
-                Send
+                {t('formButton')}
               </button>
             </form>
           </div>
@@ -101,7 +103,7 @@ const Contact = () => {
         <div className="info-map">
           Bar Smakuś
           <br />
-          Mazowiecka 41 , 30-001 Kraków
+          {t('infoMap')}
           <span>smakus@gmail.com</span>
         </div>
         <div className="mapContainer">

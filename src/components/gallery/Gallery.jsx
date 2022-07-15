@@ -1,12 +1,14 @@
 import './gallery.scss';
 import { photos } from '../../data';
+import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="gallery" id="galeria">
         <div className="title">
-          <h2>Galeria</h2>
+          <h2>{t('galleryTitle')}</h2>
         </div>
         <div className="container">
           {photos.map((photo) => {

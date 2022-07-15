@@ -1,21 +1,17 @@
 import './about.scss';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="about" id="o_nas">
       <div className="infoCard">
-        <h3 className="title">O NAS</h3>
+        <h3 className="title">{t('aboutTitle')}</h3>
         <p className="desc">
-          <span className="name">Bar Smakuś</span> już od <span>2001</span> roku
-          swoim klientom, serwuje tradycyjne polskie dania, przyrządzone zgodnie
-          z domowymi recepturami. W menu znaleźć można bogaty wybór potraw,
-          atrakcyjnych zarówno smakowo jak i cenowo.
+          <span className="name">Bar Smakuś </span>
+          {t('descOne')}
         </p>
-        <p className="desc">
-          Wszystkich ceniących sobie smaczną, zdrową i nie drogą kuchnię
-          zapraszamy do odwiedzenia naszego lokalu znajdującego się przy ulicy
-          <span> Mazowiecka 41 w Krakowie.</span>
-        </p>
+        <p className="desc">{t('descTwo')}</p>
         <div className="imgContainer">
           <img src="https://i.postimg.cc/Bb7m31vX/logo.jpg" alt="" />
         </div>

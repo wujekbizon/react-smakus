@@ -1,17 +1,21 @@
 import './advertisement.scss';
 import { init } from 'ityped';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Advertisement = ({ title, text, showMobile, showDesktop }) => {
   const textRef = useRef();
+  const [debouncedText, setDebouncedText] = useState(text);
+
   useEffect(() => {
     init(textRef.current, {
+      cursorChar: '_',
       showCursor: true,
-      strings: text,
+      strings: debouncedText,
       backDelay: 1800,
-      backSpeed: 60,
+      backSpeed: 50,
     });
-  }, []);
+  }, [debouncedText]);
+
   return (
     <div className={`${showDesktop} ${showMobile} addContainer`}>
       <h3 className="title">

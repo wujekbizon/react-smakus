@@ -44,3 +44,30 @@
     display: none;
   }
 }
+
+.ityped-cursor {
+  font-size: 0.8rem;
+  opacity: 1;
+  -webkit-animation: blink 0.4s infinite;
+  -moz-animation: blink 0.4s infinite;
+  animation: blink 0.4s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}

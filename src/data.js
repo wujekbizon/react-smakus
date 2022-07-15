@@ -1,275 +1,216 @@
-export const sliderItems = [
-  {
-    id: 1,
-    img: 'https://i.postimg.cc/bYBZn32W/bar.jpg',
-    title: 'Bar Smakuś - Zapraszamy!',
-    desc: 'Śniadania, Obiady, Kolacje.',
-  },
-  {
-    id: 2,
-    img: 'https://i.postimg.cc/1zBDpyyK/plac3a.jpg',
-    title: 'To tutaj wszystko sie zaczyna - Codziennie.',
-    desc: 'Nasze dania, zawierają zawsze swieże i wyselekcjonowane produkty, od lokalnych dostawców. ',
-  },
-  {
-    id: 3,
-    img: 'https://i.postimg.cc/pTVKrBds/ciasto.jpg',
-    title: 'Ręcznie robione, pyszne pierogi.',
-    desc: 'Świeże, smaczne - duży wybór.',
-  },
+import { useTranslation } from 'react-i18next';
 
-  {
-    id: 4,
-    img: 'https://i.postimg.cc/fWpxj3fq/bar3.jpg',
-    title: 'Nasz lokal',
-    desc: 'Nasza sala jest klimatyzowana.',
-  },
-];
+export const Categories = () => {
+  const { t } = useTranslation();
+  const menu = [
+    {
+      id: 'breakfast',
+      title: t('brekfast'),
+    },
+    {
+      id: 'soups',
+      title: t('soups'),
+    },
+    {
+      id: 'bar',
+      title: t('bar'),
+    },
+    {
+      id: 'main',
+      title: t('main'),
+    },
+    {
+      id: 'fish',
+      title: t('fish'),
+    },
+    {
+      id: 'dumplings',
+      title: t('dumplings'),
+    },
+    {
+      id: 'extras',
+      title: t('extras'),
+    },
+    {
+      id: 'drinks',
+      title: t('drinks'),
+    },
+  ];
 
-export const photos = [
-  {
-    id: 1,
-    img: 'https://i.postimg.cc/Y256nMS2/bn.jpg',
-  },
+  return menu;
+};
 
-  {
-    id: 2,
-    img: 'https://i.postimg.cc/KzxK3CKr/291349088-444248023898585-8397337012357147602-n.jpg',
-  },
+export const Breakfast = () => {
+  const { t } = useTranslation();
+  const breakfast = [
+    {
+      id: 1,
+      name: t('breakfast1'),
+      price: 8.5,
+    },
+    {
+      id: 2,
+      name: t('breakfast2'),
+      price: 7.5,
+    },
+    {
+      id: 3,
+      name: t('breakfast3'),
+      price: 2.5,
+    },
+    {
+      id: 4,
+      name: t('breakfast4'),
+      price: 4,
+    },
+    {
+      id: 5,
+      name: t('breakfast5'),
+      price: 5,
+    },
+    {
+      id: 6,
+      name: t('breakfast6'),
+      price: 5,
+    },
+    {
+      id: 7,
+      name: t('breakfast7'),
+      price: 4.5,
+    },
+    {
+      id: 8,
+      name: t('breakfast8'),
+      price: 10.8,
+    },
+    {
+      id: 9,
+      name: t('breakfast9'),
+      price: 2,
+    },
+    {
+      id: 10,
+      name: t('breakfast10'),
+      price: 3,
+    },
+  ];
 
-  {
-    id: 3,
-    img: 'https://i.postimg.cc/BvWpkZyS/bar2.jpg',
-  },
+  return breakfast;
+};
 
-  {
-    id: 4,
-    img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
-  },
+export const Soups = () => {
+  const { t } = useTranslation();
+  const soups = [
+    {
+      id: 1,
+      name: t('soup1'),
+      price: 8,
+    },
+    {
+      id: 2,
+      name: t('soup2'),
+      price: 8,
+    },
+    {
+      id: 3,
+      name: t('soup3'),
+      price: 8,
+    },
+    {
+      id: 4,
+      name: t('soup4'),
+      price: 9,
+    },
+    {
+      id: 5,
+      name: t('soup5'),
+      price: 8,
+    },
+    {
+      id: 6,
+      name: t('soup6'),
+      price: 15.8,
+    },
+    {
+      id: 7,
+      name: t('soup7'),
+      price: 16,
+    },
+    {
+      id: 8,
+      name: t('soup8'),
+      price: 8,
+    },
+    {
+      id: 9,
+      name: t('soup9'),
+      price: 8,
+    },
+    {
+      id: 10,
+      name: t('soup10'),
+      price: 8,
+    },
+  ];
+  return soups;
+};
 
-  {
-    id: 5,
-    img: 'https://i.postimg.cc/k5cSsnPh/food2.jpg',
-  },
-
-  {
-    id: 6,
-    img: 'https://i.postimg.cc/k4G2yKcB/food1.jpg',
-  },
-
-  {
-    id: 7,
-    img: 'https://i.postimg.cc/9QWVHV7h/abc.jpg',
-  },
-
-  {
-    id: 8,
-    img: 'https://i.postimg.cc/HLRfnCVj/bar1-n.jpg',
-  },
-
-  {
-    id: 9,
-    img: 'https://i.postimg.cc/B62wvLrw/bar4.jpg',
-  },
-  {
-    id: 10,
-    img: 'https://i.postimg.cc/XJ8vwKXy/logo.jpg',
-  },
-];
-
-export const menu = [
-  {
-    id: 'breakfast',
-    title: 'Śniadania',
-  },
-  {
-    id: 'soups',
-    title: 'Zupy',
-  },
-  {
-    id: 'bar',
-    title: 'Dania Barowe',
-  },
-  {
-    id: 'main',
-    title: 'Dania Główne ',
-  },
-  {
-    id: 'fish',
-    title: 'Dania Rybne ',
-  },
-  {
-    id: 'dumplings',
-    title: 'Pierogi',
-  },
-  {
-    id: 'extras',
-    title: 'Dodatki',
-  },
-  {
-    id: 'drinks',
-    title: 'Napoje',
-  },
-];
-
-export const breakfast = [
-  {
-    id: 1,
-    name: 'Jajecznica na Boczku',
-    price: 8.5,
-  },
-  {
-    id: 2,
-    name: 'Jajecznica na Maśle',
-    price: 7.5,
-  },
-  {
-    id: 3,
-    name: 'Bułka z Masłem',
-    price: 2.5,
-  },
-  {
-    id: 4,
-    name: 'Bułka z Jajkiem',
-    price: 4,
-  },
-  {
-    id: 5,
-    name: 'Bułka z Pastą Jajeczna',
-    price: 5,
-  },
-  {
-    id: 6,
-    name: 'Bułka z Boczkiem',
-    price: 5,
-  },
-  {
-    id: 7,
-    name: 'Bułka z Serem Salami',
-    price: 4.5,
-  },
-  {
-    id: 8,
-    name: 'Omlet z Dżemem',
-    price: 10.8,
-  },
-  {
-    id: 9,
-    name: 'Mleko Gotowane',
-    price: 2,
-  },
-  {
-    id: 10,
-    name: 'Kakao',
-    price: 3,
-  },
-];
-
-export const soups = [
-  {
-    id: 1,
-    name: 'Zupa Pieczarkowa',
-    price: 8,
-  },
-  {
-    id: 2,
-    name: 'Zupa Pomidorowa',
-    price: 8,
-  },
-  {
-    id: 3,
-    name: 'Zupa Ogórkowa',
-    price: 8,
-  },
-  {
-    id: 4,
-    name: 'Krupnik',
-    price: 9,
-  },
-  {
-    id: 5,
-    name: 'Rosół z Makaronem',
-    price: 8,
-  },
-  {
-    id: 6,
-    name: 'Żurek z Białą Kiełbasą',
-    price: 15.8,
-  },
-  {
-    id: 7,
-    name: 'Barszcz z Krokietem',
-    price: 16,
-  },
-  {
-    id: 8,
-    name: 'Barszcz z Jajkiem',
-    price: 8,
-  },
-  {
-    id: 9,
-    name: 'Zupa Jarzynowa',
-    price: 8,
-  },
-  {
-    id: 10,
-    name: 'Barszcz z Jaśkiem',
-    price: 8,
-  },
-];
-
-export const bar = [
-  {
-    id: 1,
-    name: 'Bigos Domowy',
-    price: 17.5,
-  },
-  {
-    id: 2,
-    name: 'Fasolka Po Bretońsku',
-    price: 17.5,
-  },
-  {
-    id: 3,
-    name: 'Gołąbki + Sos Pieczarkowy',
-    price: 25.8,
-  },
-  {
-    id: 4,
-    name: 'Placki Ziemniaczane + Sos Pieczar.',
-    price: 19.8,
-  },
-  {
-    id: 5,
-    name: 'Placek po Węgiersku',
-    price: 27.8,
-  },
-  {
-    id: 6,
-    name: 'Bukiet Jarzyn + Jajko',
-    price: 18.8,
-  },
-  {
-    id: 7,
-    name: 'Grochówka z Kiełbasą',
-    price: 13.5,
-  },
-  {
-    id: 8,
-    name: 'Wątróbka Drobiowa + Ziem/Sur',
-    price: 21.8,
-  },
-  {
-    id: 9,
-    name: 'Kwaśnica Góralska z Żeberkiem',
-    price: 15.8,
-  },
-  {
-    id: 10,
-    name: 'Kiszka Wiejska + Ziem/Sur',
-    price: 18.6,
-  },
-];
+export const Bar = () => {
+  const { t } = useTranslation();
+  const bar = [
+    {
+      id: 1,
+      name: t('bar1'),
+      price: 17.5,
+    },
+    {
+      id: 2,
+      name: t('bar2'),
+      price: 17.5,
+    },
+    {
+      id: 3,
+      name: t('bar3'),
+      price: 25.8,
+    },
+    {
+      id: 4,
+      name: t('bar4'),
+      price: 19.8,
+    },
+    {
+      id: 5,
+      name: t('bar5'),
+      price: 27.8,
+    },
+    {
+      id: 6,
+      name: t('bar6'),
+      price: 18.8,
+    },
+    {
+      id: 7,
+      name: t('bar7'),
+      price: 13.5,
+    },
+    {
+      id: 8,
+      name: t('bar8'),
+      price: 21.8,
+    },
+    {
+      id: 9,
+      name: t('bar9'),
+      price: 15.8,
+    },
+    {
+      id: 10,
+      name: t('bar10'),
+      price: 18.6,
+    },
+  ];
+  return bar;
+};
 
 export const main = [
   {
@@ -518,5 +459,56 @@ export const drinks = [
     id: 10,
     name: 'Woda',
     price: 4,
+  },
+];
+
+export const photos = [
+  {
+    id: 1,
+    img: 'https://i.postimg.cc/Y256nMS2/bn.jpg',
+  },
+
+  {
+    id: 2,
+    img: 'https://i.postimg.cc/KzxK3CKr/291349088-444248023898585-8397337012357147602-n.jpg',
+  },
+
+  {
+    id: 3,
+    img: 'https://i.postimg.cc/BvWpkZyS/bar2.jpg',
+  },
+
+  {
+    id: 4,
+    img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
+  },
+
+  {
+    id: 5,
+    img: 'https://i.postimg.cc/k5cSsnPh/food2.jpg',
+  },
+
+  {
+    id: 6,
+    img: 'https://i.postimg.cc/k4G2yKcB/food1.jpg',
+  },
+
+  {
+    id: 7,
+    img: 'https://i.postimg.cc/9QWVHV7h/abc.jpg',
+  },
+
+  {
+    id: 8,
+    img: 'https://i.postimg.cc/HLRfnCVj/bar1-n.jpg',
+  },
+
+  {
+    id: 9,
+    img: 'https://i.postimg.cc/B62wvLrw/bar4.jpg',
+  },
+  {
+    id: 10,
+    img: 'https://i.postimg.cc/XJ8vwKXy/logo.jpg',
   },
 ];

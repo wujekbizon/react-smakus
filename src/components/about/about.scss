@@ -33,11 +33,6 @@
       height: 500px;
     }
 
-    span {
-      color: $logoColor;
-      font-weight: 500;
-    }
-
     .name {
       color: $borderColor;
       font-size: 25px;
@@ -49,6 +44,7 @@
       font-size: 30px;
       font-weight: 400;
       color: $borderColor;
+      text-transform: uppercase;
     }
 
     .desc {
