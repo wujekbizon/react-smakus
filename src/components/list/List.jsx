@@ -65,6 +65,7 @@ const List = () => {
           </div>
         ))}
       </div>
+      <div className="legend">🥔 - Ziemniaki 150g 🥗 - Surówka 150g</div>
     </div>
   );
 };

@@ -20,6 +20,10 @@
       text-transform: uppercase;
       font-weight: 400;
       color: $borderColor;
+
+      // @include mobile {
+      //   margin-top: 15px;
+      // }
     }
   }
 

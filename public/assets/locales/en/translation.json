@@ -4,7 +4,7 @@
   "descOne" : "has been serving traditional Polish dishes prepared according to home recipes to its clients since 2001. The menu includes a wide selection of dishes, attractive both in terms of taste and price.",
   "descTwo" : "All those who value tasty, healthy and inexpensive cuisine are invited to visit our place located at Mazowiecka 41 in Cracow.",
   "home":"HOME",
-  "about":"ABOUT US",
+  "about":"ABOUT",
   "menu":"MENU",
   "gallery":"GALLERY",
   "contact":"CONTACT",
@@ -71,10 +71,10 @@
   "bar2": "Baked beans",
   "bar3": "Stuffed cabbage + Mushroom Sauce",
   "bar4": "Potato pancakes + Mushroom Sauce",
-  "bar5": "Placek po Węgiersku",
-  "bar6": "Bukiet Jarzyn + Jajko",
-  "bar7": "Grochówka z Kiełbasą",
-  "bar8": "Wątróbka Drobiowa + Ziem/Sur",
-  "bar9": "Kwaśnica Góralska z Żeberkiem",
-  "bar10": "Kiszka Wiejska + Ziem/Sur"
+  "bar5": "Hungarian pancakes",
+  "bar6": "Vegetable bouquet + Egg",
+  "bar7": "Pea soup with sausage",
+  "bar8": "Chicken liver + 🥔 & 🥗",
+  "bar9": "Highlander sauerkraut soup with ribs",
+  "bar10": "Country Kiszka  + 🥔 & Salad"
 }

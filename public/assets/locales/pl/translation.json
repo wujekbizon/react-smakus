@@ -41,9 +41,9 @@
   "spec3": "Bryzol z pieczarkami + Ziemniaki - 31.9zł",
   "brekfast": "Śniadanie",
   "soups": "Zupy",
-  "bar": "Dania Barowe",
-  "main": "Dania Główne",
-  "fish": "Dania Rybne",
+  "bar": " Barowe",
+  "main": "Obiad",
+  "fish": "Ryby",
   "dumplings": "Pierogi",
   "extras": "Dodatki",
   "drinks": "Napoje",
@@ -74,7 +74,7 @@
   "bar5": "Placek po Węgiersku",
   "bar6": "Bukiet Jarzyn + Jajko",
   "bar7": "Grochówka z Kiełbasą",
-  "bar8": "Wątróbka Drobiowa + Ziem/Sur",
+  "bar8": "Wątróbka Drobiowa + 🥔 i 🥗",
   "bar9": "Kwaśnica Góralska z Żeberkiem",
-  "bar10": "Kiszka Wiejska + Ziem/Sur"
+  "bar10": "Kiszka Wiejska + 🥔i 🥗"
 }

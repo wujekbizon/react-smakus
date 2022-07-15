@@ -37,6 +37,10 @@
             &:hover {
               color: $orangeColor;
             }
+
+            @include mobile {
+              color: $orangeColor;
+            }
           }
         }
       }
@@ -122,6 +126,10 @@
       span {
         color: white;
       }
+    }
+
+    .legend {
+      color: white;
     }
   }
 

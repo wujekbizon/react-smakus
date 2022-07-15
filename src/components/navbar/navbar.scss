@@ -109,7 +109,6 @@
       .langContainer {
         display: flex;
         align-items: center;
-
         position: relative;
 
         .dropdown {
@@ -142,7 +141,6 @@
           left: 10px;
           top: 35px;
           display: none;
-          // flex-direction: column;
           align-items: center;
 
           &.active {
@@ -150,7 +148,8 @@
           }
 
           @include mobile {
-            color: black;
+            left: -5px;
+            top: 20px;
           }
 
           .language {
@@ -159,6 +158,11 @@
             &:hover {
               font-weight: 600;
               color: $navColor;
+            }
+
+            @include mobile {
+              color: $navColor;
+              display: flex;
             }
           }
         }
