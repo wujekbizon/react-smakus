@@ -212,255 +212,276 @@ export const Bar = () => {
   return bar;
 };
 
-export const main = [
-  {
-    id: 1,
-    name: 'Kotlet z Kurczaka + Ziem/Sur',
-    price: 26.8,
-  },
-  {
-    id: 2,
-    name: 'Udko Pieczone/Gotowane + Ziem/Sur',
-    price: 20.8,
-  },
-  {
-    id: 3,
-    name: 'Kotlet De Volaille + Ziem/Sur',
-    price: 29.9,
-  },
-  {
-    id: 4,
-    name: 'Filet z Indyka w Sosie + Ziem/Sur',
-    price: 27.9,
-  },
-  {
-    id: 5,
-    name: 'Kotlet Schabowy + Ziem/Sur',
-    price: 26.8,
-  },
-  {
-    id: 6,
-    name: 'Żeberka Duszone + Ziem/Sur',
-    price: 26.8,
-  },
-  {
-    id: 7,
-    name: 'Stek Wiepzowy + Ziem/Sur',
-    price: 26.8,
-  },
-  {
-    id: 8,
-    name: 'Mielony Domowy + Ziem/Sur',
-    price: 28.8,
-  },
-  {
-    id: 9,
-    name: 'Gulasz Wieprzowy + Ziem/Sur',
-    price: 26.9,
-  },
-  {
-    id: 10,
-    name: 'Pulpety w Sosie + Ziem/Sur',
-    price: 28.8,
-  },
-];
+export const Main = () => {
+  const { t } = useTranslation();
+  const main = [
+    {
+      id: 1,
+      name: t('main1'),
+      price: 26.8,
+    },
+    {
+      id: 2,
+      name: t('main2'),
+      price: 20.8,
+    },
+    {
+      id: 3,
+      name: t('main3'),
+      price: 29.9,
+    },
+    {
+      id: 4,
+      name: t('main4'),
+      price: 27.9,
+    },
+    {
+      id: 5,
+      name: t('main5'),
+      price: 26.8,
+    },
+    {
+      id: 6,
+      name: t('main6'),
+      price: 26.8,
+    },
+    {
+      id: 7,
+      name: t('main7'),
+      price: 26.8,
+    },
+    {
+      id: 8,
+      name: t('main8'),
+      price: 28.8,
+    },
+    {
+      id: 9,
+      name: t('main9'),
+      price: 26.9,
+    },
+    {
+      id: 10,
+      name: t('main10'),
+      price: 28.8,
+    },
+  ];
+  return main;
+};
 
-export const fish = [
-  {
-    id: 1,
-    name: 'Sandacz + Ziem/Sur ',
-    price: 28.8,
-  },
-  {
-    id: 2,
-    name: 'Pstrąg + Ziem/Sur',
-    price: 28.8,
-  },
-  {
-    id: 3,
-    name: 'Halibut + Ziem/Sur',
-    price: 28.9,
-  },
-  {
-    id: 4,
-    name: 'Karp + Ziem/Sur',
-    price: 25.8,
-  },
-  {
-    id: 5,
-    name: 'Sola Gotowana w Jarzynach',
-    price: 28.8,
-  },
-  {
-    id: 6,
-    name: 'Filet z Dorsza + Ziem/Sur',
-    price: 28.9,
-  },
-  {
-    id: 7,
-    name: 'Łosoś + Ziem/Sur',
-    price: 28.9,
-  },
-  {
-    id: 8,
-    name: 'Morszczuk + Ziem/Sur',
-    price: 26.8,
-  },
-];
+export const Fish = () => {
+  const { t } = useTranslation();
+  const fish = [
+    {
+      id: 1,
+      name: t('fish1'),
+      price: 28.8,
+    },
+    {
+      id: 2,
+      name: t('fish2'),
+      price: 28.8,
+    },
+    {
+      id: 3,
+      name: t('fish3'),
+      price: 28.9,
+    },
+    {
+      id: 4,
+      name: t('fish4'),
+      price: 25.8,
+    },
+    {
+      id: 5,
+      name: t('fish5'),
+      price: 28.8,
+    },
+    {
+      id: 6,
+      name: t('fish6'),
+      price: 28.9,
+    },
+    {
+      id: 7,
+      name: t('fish7'),
+      price: 28.9,
+    },
+    {
+      id: 8,
+      name: t('fish8'),
+      price: 26.8,
+    },
+  ];
+  return fish;
+};
 
-export const dumplings = [
-  {
-    id: 1,
-    name: 'Pierogi z Mięsem',
-    price: 26,
-  },
-  {
-    id: 2,
-    name: 'Pierogi Ruskie',
-    price: 18,
-  },
-  {
-    id: 3,
-    name: 'Pierogi z Borówkami',
-    price: 24,
-  },
-  {
-    id: 4,
-    name: 'Pierogi z Kapusta i Grzybami ',
-    price: 19,
-  },
-  {
-    id: 5,
-    name: 'Nalesniki z Serem',
-    price: 16.8,
-  },
-  {
-    id: 6,
-    name: 'Omlet z Dżemem',
-    price: 10.8,
-  },
-  {
-    id: 7,
-    name: 'Frytki z Ketchupem',
-    price: 8.8,
-  },
-  {
-    id: 8,
-    name: 'Kasza Gryczna',
-    price: 5,
-  },
-  {
-    id: 9,
-    name: 'Kefir',
-    price: 3.5,
-  },
-];
+export const Dumplings = () => {
+  const { t } = useTranslation();
+  const dumplings = [
+    {
+      id: 1,
+      name: t('dumplings1'),
+      price: 26,
+    },
+    {
+      id: 2,
+      name: t('dumplings2'),
+      price: 18,
+    },
+    {
+      id: 3,
+      name: t('dumplings3'),
+      price: 24,
+    },
+    {
+      id: 4,
+      name: t('dumplings4'),
+      price: 19,
+    },
+    {
+      id: 5,
+      name: t('dumplings5'),
+      price: 16.8,
+    },
+    {
+      id: 6,
+      name: t('dumplings6'),
+      price: 10.8,
+    },
+    {
+      id: 7,
+      name: t('dumplings7'),
+      price: 8.8,
+    },
+    {
+      id: 8,
+      name: t('dumplings8'),
+      price: 5,
+    },
+    {
+      id: 9,
+      name: t('dumplings9'),
+      price: 3.5,
+    },
+  ];
+  return dumplings;
+};
 
-export const extras = [
-  {
-    id: 1,
-    name: 'Ziemniaki',
-    price: 5,
-  },
-  {
-    id: 2,
-    name: 'Kapusta Zasmażana',
-    price: 7.5,
-  },
-  {
-    id: 3,
-    name: 'Buraczki Zasmażane',
-    price: 7.5,
-  },
-  {
-    id: 4,
-    name: 'Marchewka z Groszkiem',
-    price: 7.5,
-  },
-  {
-    id: 5,
-    name: 'Surówka z Marchwi',
-    price: 7,
-  },
-  {
-    id: 6,
-    name: 'Surówka z Czerwonej Kapusty',
-    price: 7,
-  },
-  {
-    id: 7,
-    name: 'Surówka z Białej Kapusty',
-    price: 7,
-  },
-  {
-    id: 8,
-    name: 'Zestaw Surówek',
-    price: 8,
-  },
-  {
-    id: 9,
-    name: 'Mizeria',
-    price: 9,
-  },
-  {
-    id: 10,
-    name: 'Młoda Kapusta',
-    price: 7.5,
-  },
-];
+export const Extras = () => {
+  const { t } = useTranslation();
 
-export const drinks = [
-  {
-    id: 1,
-    name: 'Kawa Parzona',
-    price: 7,
-  },
-  {
-    id: 2,
-    name: 'Kawa Rozpuszczalna',
-    price: 7,
-  },
-  {
-    id: 3,
-    name: 'Herbata',
-    price: 3,
-  },
-  {
-    id: 4,
-    name: 'Napój Tymbark',
-    price: 5,
-  },
-  {
-    id: 5,
-    name: 'Coca-Cola',
-    price: 6,
-  },
-  {
-    id: 6,
-    name: 'Kompot Owocowy',
-    price: 3,
-  },
-  {
-    id: 7,
-    name: 'Sok Jabłkowy',
-    price: 5,
-  },
-  {
-    id: 8,
-    name: 'Sok Porzeczkowy',
-    price: 6,
-  },
-  {
-    id: 9,
-    name: 'Woda Mineralna',
-    price: 5,
-  },
-  {
-    id: 10,
-    name: 'Woda',
-    price: 4,
-  },
-];
+  const extras = [
+    {
+      id: 1,
+      name: t('extras1'),
+      price: 5,
+    },
+    {
+      id: 2,
+      name: t('extras2'),
+      price: 7.5,
+    },
+    {
+      id: 3,
+      name: t('extras3'),
+      price: 7.5,
+    },
+    {
+      id: 4,
+      name: t('extras4'),
+      price: 7.5,
+    },
+    {
+      id: 5,
+      name: t('extras5'),
+      price: 7,
+    },
+    {
+      id: 6,
+      name: t('extras6'),
+      price: 7,
+    },
+    {
+      id: 7,
+      name: t('extras7'),
+      price: 7,
+    },
+    {
+      id: 8,
+      name: t('extras8'),
+      price: 8,
+    },
+    {
+      id: 9,
+      name: t('extras9'),
+      price: 9,
+    },
+    {
+      id: 10,
+      name: t('extras10'),
+      price: 7.5,
+    },
+  ];
+  return extras;
+};
+
+export const Drinks = () => {
+  const { t } = useTranslation();
+  const drinks = [
+    {
+      id: 1,
+      name: t('drinks1'),
+      price: 7,
+    },
+    {
+      id: 2,
+      name: t('drinks2'),
+      price: 7,
+    },
+    {
+      id: 3,
+      name: t('drinks3'),
+      price: 3,
+    },
+    {
+      id: 4,
+      name: t('drinks4'),
+      price: 5,
+    },
+    {
+      id: 5,
+      name: t('drinks5'),
+      price: 6,
+    },
+    {
+      id: 6,
+      name: t('drinks6'),
+      price: 3,
+    },
+    {
+      id: 7,
+      name: t('drinks7'),
+      price: 5,
+    },
+    {
+      id: 8,
+      name: t('drinks8'),
+      price: 6,
+    },
+    {
+      id: 9,
+      name: t('drinks9'),
+      price: 5,
+    },
+    {
+      id: 10,
+      name: t('drinks10'),
+      price: 4,
+    },
+  ];
+  return drinks;
+};
 
 export const photos = [
   {

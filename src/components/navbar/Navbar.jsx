@@ -61,6 +61,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                     onClick={() => {
                       i18next.changeLanguage(code);
                       setToggle(false);
+                      window.location.reload();
                     }}
                   >
                     {name}
@@ -71,11 +72,15 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 
             <DarkModeOutlinedIcon
               className="icon orange"
-              onClick={() => dispatch({ type: 'TOGGLE' })}
+              onClick={() => {
+                dispatch({ type: 'TOGGLE' });
+              }}
             />
             <LightModeIcon
               className="icon sun"
-              onClick={() => dispatch({ type: 'TOGGLE' })}
+              onClick={() => {
+                dispatch({ type: 'TOGGLE' });
+              }}
             />
           </div>
         </div>

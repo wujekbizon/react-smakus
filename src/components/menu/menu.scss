@@ -33,6 +33,10 @@
     color: white;
     width: 60%;
 
+    @include mobile {
+      font-size: 28px;
+    }
+
     li {
       margin-bottom: 25px;
 
