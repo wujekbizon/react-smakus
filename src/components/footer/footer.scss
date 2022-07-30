@@ -46,6 +46,10 @@
         margin-left: 15px;
         transition: all 0.2s linear;
 
+        @include mobile {
+          margin-left: 5px;
+        }
+
         &:hover {
           transform: scale(1.1);
         }
@@ -70,6 +74,10 @@
     flex: 1;
     display: flex;
     justify-content: space-evenly;
+
+    @include tablet {
+      display: none;
+    }
 
     @include mobile {
       display: none;

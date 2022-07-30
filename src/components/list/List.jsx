@@ -80,9 +80,12 @@ const List = () => {
           />
         ))}
       </ul>
-      <div className="container">{renderList}</div>
-      <div className="legend">
-        🥔 - {t('legend1')} 150g 🥗 - {t('legend2')} 150g
+      <div className="container">
+        {renderList}
+        <div className="legend">
+          <div>🥔 - {t('legend1')} 150g</div>
+          <div>🥗 - {t('legend2')} 150g</div>
+        </div>
       </div>
     </div>
   );

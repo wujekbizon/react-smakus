@@ -6,192 +6,206 @@
   background-color: $lightColor;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10%;
+
+  @include tablet {
+    gap: 0;
+  }
 
   @include mobile {
     flex-direction: column;
-    height: calc(100% - 70px);
+    height: calc(100% - 60px);
     margin-top: 10px;
     gap: 0;
   }
 
   .left {
-    flex: 0.8;
-    width: 80%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex: 1;
+    width: 90%;
+    height: 90%;
     background-color: white;
     box-shadow: 0px 0px 15px 3px $borderColor;
     border-radius: 10px;
-    margin-left: 100px;
+    margin: 0px 40px;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      margin-left: 40px;
+    }
 
     @include mobile {
       width: 100%;
-      margin: 0 auto;
+      margin: 0;
       box-shadow: none;
       border-radius: 0px;
     }
 
-    .top {
-      width: 80%;
+    .container {
+      width: 90%;
 
-      .info {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-        @include mobile {
-          padding: 0;
-        }
+      .top {
+        width: 80%;
 
-        .title {
-          width: max-content;
-          font-size: 35px;
-          font-weight: 400;
-          border-bottom: 1px solid $borderColor;
-          color: $borderColor;
-          margin-bottom: 20px;
-          align-self: center;
-          text-transform: uppercase;
-
-          @include mobile {
-            font-size: 25px;
-            margin-top: 10px;
-          }
-        }
-
-        .infoContainer {
+        .info {
           display: flex;
           flex-direction: column;
+          padding: 20px;
 
-          .item {
+          @include mobile {
+            padding: 0;
+          }
+
+          .title {
+            width: max-content;
+            font-size: 35px;
+            font-weight: 400;
+            border-bottom: 1px solid $borderColor;
+            color: $borderColor;
+            margin-bottom: 40px;
+            align-self: center;
+            text-transform: uppercase;
+
+            @include mobile {
+              font-size: 25px;
+              margin-top: 10px;
+            }
+          }
+
+          .infoContainer {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+
+            .item {
+              display: flex;
+              justify-content: space-between;
+            }
           }
         }
       }
-    }
 
-    .bottom {
-      width: 80%;
+      .bottom {
+        width: 80%;
 
-      .formContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px 50px;
-
-        @include mobile {
-          padding: 0;
-        }
-
-        .title {
-          font-size: 40px;
-          color: $borderColor;
-          border-bottom: 1px solid $borderColor;
-          font-weight: 400;
-          width: max-content;
-          font-size: 35px;
-          text-transform: uppercase;
-
-          @include mobile {
-            margin-top: 20px;
-            font-size: 25px;
-          }
-        }
-
-        form {
-          width: 80%;
+        .formContainer {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 30px;
+          padding: 0px 50px;
 
           @include mobile {
-            width: 100%;
-            margin-top: 10px;
+            padding: 0;
           }
 
-          input {
-            width: 100%;
-            height: 30px;
-            border: none;
-            // border-bottom: 1px solid $borderColor;
-            margin: 5px;
-            font-size: 18px;
-            background-color: whitesmoke;
-
-            @include mobile {
-              height: 25px;
-              font-size: 16px;
-            }
-
-            &.active,
-            &:focus {
-              outline: none;
-            }
-
-            &::placeholder {
-              font-size: 15px;
-              text-transform: uppercase;
-
-              @include mobile {
-                font-size: 12px;
-              }
-            }
-          }
-
-          textarea {
-            width: 100%;
-            height: 80px;
-            border: none;
-            // border-bottom: 1px solid black;
-            font-size: 18px;
-            resize: none;
-            margin-top: 5px;
-            background-color: whitesmoke;
-
-            @include mobile {
-              height: 60px;
-              font-size: 16px;
-            }
-
-            &.active,
-            &:focus {
-              outline: none;
-            }
-
-            &::placeholder {
-              text-transform: uppercase;
-
-              @include mobile {
-                font-size: 12px;
-              }
-            }
-          }
-
-          .btn-form {
-            width: 90%;
-            padding: 10px 10px;
-            margin-top: 20px;
-            cursor: pointer;
-            font-size: 18px;
+          .title {
+            font-size: 40px;
+            color: $borderColor;
+            border-bottom: 1px solid $borderColor;
+            font-weight: 400;
+            width: max-content;
+            font-size: 35px;
             text-transform: uppercase;
-            transition: all 0.3s linear;
-            border: 1px solid $sidebarColor;
-            border-radius: 5px;
 
             @include mobile {
-              margin-bottom: 15px;
-              padding: 5px 5px;
+              margin-top: 20px;
+              font-size: 25px;
+            }
+          }
+
+          form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+
+            @include mobile {
+              width: 100%;
+              margin-top: 10px;
             }
 
-            &:hover {
-              background-color: $sidebarColor;
-              color: whitesmoke;
+            input {
+              width: 100%;
+              height: 30px;
+              border: none;
+              // border-bottom: 1px solid $borderColor;
+              margin: 5px;
+              font-size: 18px;
+              background-color: whitesmoke;
+
+              @include mobile {
+                height: 25px;
+                font-size: 16px;
+              }
+
+              &.active,
+              &:focus {
+                outline: none;
+              }
+
+              &::placeholder {
+                font-size: 15px;
+                text-transform: uppercase;
+
+                @include mobile {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            textarea {
+              width: 100%;
+              height: 80px;
+              border: none;
+              // border-bottom: 1px solid black;
+              font-size: 18px;
+              resize: none;
+              margin-top: 5px;
+              background-color: whitesmoke;
+
+              @include mobile {
+                height: 60px;
+                font-size: 16px;
+              }
+
+              &.active,
+              &:focus {
+                outline: none;
+              }
+
+              &::placeholder {
+                text-transform: uppercase;
+
+                @include mobile {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .btn-form {
+              width: 90%;
+              padding: 10px 10px;
+              margin-top: 20px;
+              cursor: pointer;
+              font-size: 18px;
+              text-transform: uppercase;
+              transition: all 0.3s linear;
+              border: 1px solid $sidebarColor;
+              border-radius: 5px;
+
+              @include mobile {
+                margin-bottom: 15px;
+                padding: 5px 5px;
+              }
+
+              &:hover {
+                background-color: $sidebarColor;
+                color: whitesmoke;
+              }
             }
           }
         }
@@ -201,12 +215,16 @@
 
   .right {
     flex: 1;
-    height: 80%;
+    width: 100%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     position: relative;
+
+    @include tablet {
+      padding: 5px;
+    }
 
     @include mobile {
       padding: 0;
@@ -227,8 +245,13 @@
       border: 1px solid $sidebarColor;
       border-radius: 10px;
 
+      @include tablet {
+        width: 70%;
+        left: 12.5%;
+      }
+
       @include mobile {
-        top: 70%;
+        top: 60%;
         left: 0px;
         width: calc(100% - 2px);
         border-radius: 0;
@@ -249,7 +272,7 @@
     }
 
     .mapContainer {
-      width: 80%;
+      width: 90%;
       height: 100%;
       box-shadow: 0px 0px 15px 3px $borderColor;
       border-radius: 10px;

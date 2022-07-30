@@ -10,9 +10,16 @@ $lightColor: #d9dbdf;
 $orangeColor: #fa8231;
 
 $width: 768px;
+$widthTablet: 1150px;
 
 @mixin mobile {
   @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$widthTablet}) {
     @content;
   }
 }

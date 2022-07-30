@@ -71,7 +71,7 @@ const Slider = () => {
   }, [slideIndex, sliderItems.length]);
 
   return (
-    <>
+    <div className="slider-wrapper">
       <div className="slider" id="/">
         <div className="arrowLeft" onClick={prevSlide}>
           <ArrowBackIosOutlinedIcon className="icon" />
@@ -109,11 +109,13 @@ const Slider = () => {
           })}
         </div>
       </div>
-      <Advertisement
-        title={t('adSlider')}
-        text={['12 634 16 82', 'smakus.gmail.com']}
-      />
-    </>
+      <div>
+        <Advertisement
+          title={t('adSlider')}
+          text={['12 634 16 82', 'smakus.gmail.com']}
+        />
+      </div>
+    </div>
   );
 };
 

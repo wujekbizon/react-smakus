@@ -34,68 +34,76 @@ const Contact = () => {
   return (
     <div className="contact" id="kontakt">
       <div className="left">
-        <div className="top">
-          <div className="info">
-            <h2 className="title">{t('contactTitle')}</h2>
+        <div className="container">
+          <div className="top">
+            <div className="info">
+              <h2 className="title">{t('contactTitle')}</h2>
 
-            <div className="infoContainer">
-              <div className="item">
-                <p>{t('monday')}</p>
-                <span>10:00 - 17:30</span>
-              </div>
-              <div className="item">
-                <p>{t('tuesday')}</p>
-                <span>10:00 - 17:30</span>
-              </div>
-              <div className="item">
-                <p>{t('wednesday')}</p>
-                <span>10:00 - 17:30</span>
-              </div>
-              <div className="item">
-                <p>{t('thursday')}</p>
-                <span>10:00 - 17:30</span>
-              </div>
-              <div className="item">
-                <p>{t('friday')}</p>
-                <span>10:00 - 17:30</span>
-              </div>
-              <div className="item">
-                <p>{t('saturday')}</p>
-                <span>10:00 - 15:30</span>
-              </div>
-              <div className="item">
-                <p>{t('sunday')}</p>
-                <span>{t('closed')}</span>
+              <div className="infoContainer">
+                <div className="item">
+                  <p>{t('monday')}</p>
+                  <span>10:00 - 17:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('tuesday')}</p>
+                  <span>10:00 - 17:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('wednesday')}</p>
+                  <span>10:00 - 17:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('thursday')}</p>
+                  <span>10:00 - 17:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('friday')}</p>
+                  <span>10:00 - 17:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('saturday')}</p>
+                  <span>10:00 - 15:30</span>
+                </div>
+                <div className="item">
+                  <p>{t('sunday')}</p>
+                  <span>{t('closed')}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="bottom">
-          <div className="formContainer">
-            <h2 className="title">{t('formTitle')}</h2>
-            <form ref={form} onSubmit={sendEmail}>
-              <input type="text" name="name" placeholder={t('name')} required />
-              <input
-                type="email"
-                name="email"
-                placeholder={t('email')}
-                required
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder={t('subject')}
-                required
-              />
-              <textarea
-                placeholder={t('message')}
-                name="message"
-                required
-              ></textarea>
-              <button type="submit" className="btn-form">
-                {t('formButton')}
-              </button>
-            </form>
+
+          <div className="bottom">
+            <div className="formContainer">
+              <h2 className="title">{t('formTitle')}</h2>
+              <form ref={form} onSubmit={sendEmail}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder={t('name')}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={t('email')}
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder={t('subject')}
+                  required
+                />
+                <textarea
+                  placeholder={t('message')}
+                  name="message"
+                  required
+                ></textarea>
+                <button type="submit" className="btn-form">
+                  {t('formButton')}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

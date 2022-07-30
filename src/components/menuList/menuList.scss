@@ -8,8 +8,13 @@
   color: $textColor;
   cursor: pointer;
 
+  @include tablet {
+    margin-right: 10px;
+  }
+
   @include mobile {
     margin: 0px;
+    padding: 5px;
     font-size: 18px;
   }
 
