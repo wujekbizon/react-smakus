@@ -491,17 +491,17 @@ export const photos = [
 
   {
     id: 2,
-    img: 'https://i.postimg.cc/KzxK3CKr/291349088-444248023898585-8397337012357147602-n.jpg',
+    img: 'https://i.postimg.cc/9QWVHV7h/abc.jpg',
   },
 
   {
     id: 3,
-    img: 'https://i.postimg.cc/BvWpkZyS/bar2.jpg',
+    img: 'https://i.postimg.cc/bYFjDXfQ/pierogi2.jpg',
   },
 
   {
     id: 4,
-    img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
+    img: 'https://i.postimg.cc/FzG5GqYQ/pierogi1.jpg',
   },
 
   {
@@ -511,12 +511,12 @@ export const photos = [
 
   {
     id: 6,
-    img: 'https://i.postimg.cc/k4G2yKcB/food1.jpg',
+    img: 'https://i.postimg.cc/wxsdmfqZ/pierogi3.jpg',
   },
 
   {
     id: 7,
-    img: 'https://i.postimg.cc/9QWVHV7h/abc.jpg',
+    img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
   },
 
   {
@@ -526,7 +526,7 @@ export const photos = [
 
   {
     id: 9,
-    img: 'https://i.postimg.cc/B62wvLrw/bar4.jpg',
+    img: 'https://i.postimg.cc/BvWpkZyS/bar2.jpg',
   },
   {
     id: 10,
