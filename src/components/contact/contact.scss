@@ -7,10 +7,6 @@
   display: flex;
   align-items: center;
 
-  @include tablet {
-    gap: 0;
-  }
-
   @include mobile {
     flex-direction: column;
     height: 100%;
@@ -19,39 +15,46 @@
   }
 
   .left {
-    flex: 1;
-    width: 90%;
-    height: 90%;
-    background-color: white;
-    box-shadow: 0px 0px 15px 3px $borderColor;
-    border-radius: 0px;
-    margin: 0px 40px;
+    width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-
-    @include tablet {
-      margin-left: 40px;
-    }
 
     @include mobile {
       width: 100%;
-      margin: 0;
-      box-shadow: none;
-      border-radius: 0px;
     }
 
     .container {
-      width: 90%;
-
+      width: 70%;
+      height: 85%;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      background-color: white;
+      box-shadow: 0px 0px 15px 3px $borderColor;
+
+      @include tablet {
+        width: 90%;
+        padding: 0;
+      }
+
+      @include mobile {
+        width: 100%;
+        box-shadow: none;
+        // padding: 20px;
+      }
 
       .top {
         width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
         .info {
+          width: 100%;
           display: flex;
           flex-direction: column;
           padding: 20px;
@@ -70,6 +73,10 @@
             align-self: center;
             text-transform: uppercase;
 
+            @include tablet {
+              font-size: 30px;
+            }
+
             @include mobile {
               font-size: 25px;
               margin-top: 10px;
@@ -83,6 +90,11 @@
             .item {
               display: flex;
               justify-content: space-between;
+              font-size: 20px;
+
+              @include mobile {
+                font-size: 15px;
+              }
             }
           }
         }
@@ -97,18 +109,21 @@
           align-items: center;
           padding: 0px 50px;
 
-          @include mobile {
+          @include tablet {
             padding: 0;
           }
 
           .title {
-            font-size: 40px;
+            width: max-content;
             color: $borderColor;
             border-bottom: 1px solid $borderColor;
             font-weight: 400;
-            width: max-content;
             font-size: 35px;
             text-transform: uppercase;
+
+            @include tablet {
+              font-size: 30px;
+            }
 
             @include mobile {
               margin-top: 20px;
@@ -117,14 +132,17 @@
           }
 
           form {
-            width: 80%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 30px;
 
+            @include tablet {
+              width: 90%;
+            }
+
             @include mobile {
-              width: 100%;
               margin-top: 10px;
             }
 
@@ -132,7 +150,6 @@
               width: 100%;
               height: 30px;
               border: none;
-              // border-bottom: 1px solid $borderColor;
               margin: 5px;
               font-size: 18px;
               background-color: whitesmoke;
@@ -161,7 +178,6 @@
               width: 100%;
               height: 80px;
               border: none;
-              // border-bottom: 1px solid black;
               font-size: 18px;
               resize: none;
               margin-top: 5px;
@@ -214,21 +230,12 @@
   }
 
   .right {
-    flex: 1;
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-
-    @include tablet {
-      padding: 5px;
-    }
-
-    @include mobile {
-      padding: 0;
-    }
 
     .info-map {
       position: absolute;
@@ -251,9 +258,8 @@
 
       @include mobile {
         top: 60%;
-        left: 0px;
-        width: calc(100% - 2px);
-        border-radius: 0;
+        left: 20px;
+        width: 90%;
         font-size: 16px;
         padding: 0;
       }
@@ -271,13 +277,18 @@
     }
 
     .mapContainer {
-      width: 90%;
-      height: 100%;
+      width: 70%;
+      height: 90%;
       box-shadow: 0px 0px 15px 3px $borderColor;
 
+      @include tablet {
+        width: 90%;
+        height: 85%;
+      }
+
       @include mobile {
-        width: 100vw;
-        height: 50vh;
+        width: 100%;
+        height: 40vh;
         box-shadow: none;
       }
     }
