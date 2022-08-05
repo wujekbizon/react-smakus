@@ -12,25 +12,23 @@
 
   .infoCard {
     width: 50%;
-    height: 60%;
-    padding: 20px;
+
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-radius: 5px;
     box-shadow: 0px 0px 15px 3px black;
     background-color: whitesmoke;
 
     @include mobile {
       width: 80%;
-      height: 60%;
     }
 
     .name {
       color: $borderColor;
       font-size: 25px;
-      font-weight: 400;
+      font-weight: 600;
       text-transform: uppercase;
 
       @include mobile {
@@ -39,10 +37,14 @@
     }
 
     .title {
-      font-size: 30px;
-      font-weight: 400;
+      font-size: 45px;
+      font-weight: 300;
       color: $borderColor;
       text-transform: uppercase;
+
+      @include tablet {
+        font-size: 35px;
+      }
 
       @include mobile {
         font-size: 24px;
@@ -50,13 +52,17 @@
     }
 
     .desc {
-      font-size: 20px;
-      margin: 0px 50px;
+      font-size: 24px;
+      padding: 20px;
       color: $textColor;
+
+      @include tablet {
+        font-size: 22px;
+      }
 
       @include mobile {
         font-size: 16px;
-        margin: 0 20px;
+        padding: 10px;
       }
     }
 
