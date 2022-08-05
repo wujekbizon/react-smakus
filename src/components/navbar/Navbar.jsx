@@ -8,25 +8,19 @@ import { DarkModeContext } from '../../context/darkModeContext';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import cookies from 'js-cookie';
-
-const languages = [
-  {
-    code: 'en',
-    name: 'EN',
-    country_code: 'gb',
-  },
-  {
-    code: 'pl',
-    name: 'PL',
-    country_code: 'pl',
-  },
-];
+import ReactCountryFlag from 'react-country-flag';
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   const { dispatch } = useContext(DarkModeContext);
   const { t } = useTranslation();
   const [toggle, setToggle] = useState(false);
+
   const currentLanguageCode = cookies.get('i18next') || 'pl';
+
+  const languages = [
+    { id: 1, code: 'en', name: t('languageEN'), country_code: 'gb' },
+    { id: 2, code: 'pl', name: t('languagePL'), country_code: 'pl' },
+  ];
 
   return (
     <>
@@ -44,7 +38,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             <span className="subtitle">{t('navSubtitle')}</span>
           </div>
           <div className="right">
-            <div className="langContainer">
+            <div className="language-container">
               <div className="dropdown">
                 <LanguageOutlinedIcon className="icon globe" />
                 <ArrowDropDownIcon
@@ -52,22 +46,39 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                   onClick={() => setToggle(!toggle)}
                 />
               </div>
-
-              <ul className={toggle ? 'languages active' : 'languages'}>
-                {languages.map(({ code, name, country_code }) => (
-                  <li
-                    key={country_code}
-                    className="language"
-                    onClick={() => {
-                      i18next.changeLanguage(code);
-                      setToggle(false);
-                      window.location.reload();
-                    }}
-                  >
-                    {name}
-                  </li>
-                ))}
-              </ul>
+              {toggle && (
+                <div className="language-menu scale-up-center">
+                  <ul className="languages">
+                    {languages.map(({ code, name, country_code }) => (
+                      <li
+                        className="language-list"
+                        key={country_code}
+                        onClick={() => {
+                          i18next.changeLanguage(code);
+                          setToggle(false);
+                          window.location.reload();
+                        }}
+                      >
+                        <ReactCountryFlag
+                          style={{ width: '2em', height: '2em' }}
+                          countryCode={country_code}
+                          svg
+                          cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
+                          cdnSuffix="svg"
+                          title={name}
+                          className="flag"
+                        />
+                        <button
+                          className="language-btn"
+                          disabled={code === currentLanguageCode}
+                        >
+                          {name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             <DarkModeOutlinedIcon

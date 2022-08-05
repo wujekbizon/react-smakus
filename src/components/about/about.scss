@@ -10,10 +10,6 @@
   background-size: cover;
   background-position: center;
 
-  @include mobile {
-    height: calc(100vh - 90px);
-  }
-
   .infoCard {
     width: 50%;
     height: 60%;

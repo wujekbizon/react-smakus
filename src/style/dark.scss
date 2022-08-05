@@ -32,14 +32,21 @@
         .globe {
           color: whitesmoke;
         }
-        .langContainer {
-          .language {
-            &:hover {
-              color: $orangeColor;
-            }
 
-            @include mobile {
-              color: $orangeColor;
+        .language-container {
+          .language-menu {
+            .language-list {
+              .language-btn {
+                &:hover {
+                  color: $orangeColor;
+                }
+
+                &:disabled {
+                  cursor: default;
+                  color: dimgray;
+                  // opacity: 0.7;
+                }
+              }
             }
           }
         }

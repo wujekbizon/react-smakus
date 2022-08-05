@@ -486,7 +486,7 @@ export const Drinks = () => {
 export const photos = [
   {
     id: 1,
-    img: 'https://i.postimg.cc/Y256nMS2/bn.jpg',
+    img: 'https://i.postimg.cc/QtFbpZ4H/bn.jpg',
   },
 
   {

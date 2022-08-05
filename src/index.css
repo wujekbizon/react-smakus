@@ -8,10 +8,20 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   scrollbar-width: none;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  /* Optional: show position indicator in red */
 }
 
-html::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 body {

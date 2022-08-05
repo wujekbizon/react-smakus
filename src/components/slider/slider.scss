@@ -2,21 +2,13 @@
 
 .slider-wrapper {
   position: relative;
-  height: calc(100vh - 100px);
-
-  @include mobile {
-    height: calc(100vh - 70px);
-  }
+  height: 100vh;
 
   .slider {
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 50px);
     display: flex;
     overflow: hidden;
-
-    @include mobile {
-      height: calc(100vh - 110px);
-    }
 
     .arrowLeft {
       width: 45px;
