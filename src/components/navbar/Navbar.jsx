@@ -60,7 +60,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                         }}
                       >
                         <ReactCountryFlag
-                          style={{ width: '2em', height: '2em' }}
+                          style={{ width: '1.5em', height: '1.5em' }}
                           countryCode={country_code}
                           svg
                           cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
