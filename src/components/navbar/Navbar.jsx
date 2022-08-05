@@ -47,7 +47,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                 />
               </div>
               {toggle && (
-                <div className="language-menu scale-up-center">
+                <div className="language-menu slide-bottom">
                   <ul className="languages">
                     {languages.map(({ code, name, country_code }) => (
                       <li
@@ -80,7 +80,6 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                 </div>
               )}
             </div>
-
             <DarkModeOutlinedIcon
               className="icon orange"
               onClick={() => {
