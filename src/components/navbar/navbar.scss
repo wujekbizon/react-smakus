@@ -10,6 +10,10 @@
   z-index: 6;
   transition: all 1s ease;
 
+  @include tablet {
+    height: 80px;
+  }
+
   @include mobile {
     height: 60px;
   }

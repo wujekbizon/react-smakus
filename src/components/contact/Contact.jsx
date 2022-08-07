@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="kontakt">
+    <div className="contact app__bg-contact" id="kontakt">
       <div className="left">
         <div className="container">
           <div className="top">

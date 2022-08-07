@@ -530,10 +530,6 @@ export const photos = [
   },
   {
     id: 10,
-    img: 'https://i.postimg.cc/XJ8vwKXy/logo.jpg',
-  },
-  {
-    id: 11,
     img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
   },
 ];

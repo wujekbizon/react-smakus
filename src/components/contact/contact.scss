@@ -3,7 +3,7 @@
 .contact {
   width: 100%;
   min-height: calc(100vh - 180px);
-  background-color: $lightColor;
+  // background-color: $lightColor;
   display: flex;
   align-items: center;
 
@@ -298,7 +298,11 @@
 
   .leaflet-container {
     width: 100%;
-    min-height: 75vh;
+    min-height: 74vh;
+
+    @include tablet {
+      min-height: 75vh;
+    }
 
     position: relative;
     z-index: 2;
