@@ -223,6 +223,52 @@
     }
   }
 
+  .contact {
+    .left {
+      background-color: $borderColor;
+      .container {
+        background-color: $navColor;
+
+        .top {
+          .title {
+            color: white;
+            border-color: $orangeColor;
+          }
+
+          .infoContainer {
+            .item {
+              color: whitesmoke;
+            }
+          }
+        }
+
+        .bottom {
+          .title {
+            color: white;
+            border-color: $orangeColor;
+          }
+
+          input,
+          textarea {
+            background-color: $sidebarColor;
+            color: white;
+
+            &::placeholder {
+              color: $textColor;
+            }
+          }
+
+          .btn-form {
+            color: white;
+            &:hover {
+              color: $orangeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .footer {
     background-color: $navColor;
 
