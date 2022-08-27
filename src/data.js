@@ -1,4 +1,14 @@
 import { useTranslation } from 'react-i18next';
+import crew from '../src/images/bn.jpg';
+import crew2 from '../src/images/abc.jpg';
+import pierogi2 from '../src/images/pierogi2.jpg';
+import pierogi1 from '../src/images/pierogi1.jpg';
+import pierogi3 from '../src/images/pierogi3.jpg';
+import bar1_n from '../src/images/bar1_n.jpg';
+import bar2 from '../src/images/bar2.jpg';
+import food from '../src/images/food.jpg';
+import food2 from '../src/images/food2.jpg';
+import cennik from '../src/images/cennik.jpg';
 
 export const Categories = () => {
   const { t } = useTranslation();
@@ -486,50 +496,50 @@ export const Drinks = () => {
 export const photos = [
   {
     id: 1,
-    img: 'https://i.postimg.cc/QtFbpZ4H/bn.jpg',
+    img: crew,
   },
 
   {
     id: 2,
-    img: 'https://i.postimg.cc/9QWVHV7h/abc.jpg',
+    img: crew2,
   },
 
   {
     id: 3,
-    img: 'https://i.postimg.cc/bYFjDXfQ/pierogi2.jpg',
+    img: pierogi2,
   },
 
   {
     id: 4,
-    img: 'https://i.postimg.cc/FzG5GqYQ/pierogi1.jpg',
+    img: pierogi1,
   },
 
   {
     id: 5,
-    img: 'https://i.postimg.cc/k5cSsnPh/food2.jpg',
+    img: food2,
   },
 
   {
     id: 6,
-    img: 'https://i.postimg.cc/wxsdmfqZ/pierogi3.jpg',
+    img: pierogi3,
   },
 
   {
     id: 7,
-    img: 'https://i.postimg.cc/RVyM9pV1/food.jpg',
+    img: food,
   },
 
   {
     id: 8,
-    img: 'https://i.postimg.cc/HLRfnCVj/bar1-n.jpg',
+    img: bar1_n,
   },
 
   {
     id: 9,
-    img: 'https://i.postimg.cc/BvWpkZyS/bar2.jpg',
+    img: bar2,
   },
   {
     id: 10,
-    img: 'https://i.postimg.cc/rF3NRFq1/cennik.jpg',
+    img: cennik,
   },
 ];

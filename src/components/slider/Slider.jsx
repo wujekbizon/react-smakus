@@ -4,31 +4,35 @@ import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import { useState, useEffect } from 'react';
 import Advertisement from '../advertisement/Advertisement';
 import { useTranslation } from 'react-i18next';
+import bar from '../../images/bar.jpg';
+import plac3a from '../../images/plac3a.jpg';
+import ciasto from '../../images/ciasto.jpg';
+import bar3 from '../../images/bar3.jpg';
 
 const Slider = () => {
   const { t } = useTranslation();
   const sliderItems = [
     {
       id: 1,
-      img: 'https://i.postimg.cc/bYBZn32W/bar.jpg',
+      img: bar,
       title: t('titleFirst'),
       desc: t('descFirst'),
     },
     {
       id: 2,
-      img: 'https://i.postimg.cc/1zBDpyyK/plac3a.jpg',
+      img: plac3a,
       title: t('titleSecond'),
       desc: t('descSecond'),
     },
     {
       id: 3,
-      img: 'https://i.postimg.cc/pTVKrBds/ciasto.jpg',
+      img: ciasto,
       title: t('titleThird'),
       desc: t('descThird'),
     },
     {
       id: 4,
-      img: 'https://i.postimg.cc/fWpxj3fq/bar3.jpg',
+      img: bar3,
       title: t('titleFourth'),
       desc: t('descFourth'),
     },

@@ -1,5 +1,6 @@
 import './about.scss';
 import { useTranslation } from 'react-i18next';
+import logo from '../../images/logo.jpg';
 
 const About = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const About = () => {
         </p>
         <p className="desc">{t('descTwo')}</p>
         <div className="imgContainer">
-          <img src="https://i.postimg.cc/Bb7m31vX/logo.jpg" alt="" />
+          <img src={logo} alt="" />
         </div>
       </div>
     </div>
